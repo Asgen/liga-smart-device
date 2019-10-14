@@ -3,13 +3,13 @@
   color: map-get($color, white);
 
   background-color: map-get($color, dark);
-  background-image: url("../../img/bg-hero.png");
+  background-image: url("../img/bg-hero.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
   &__wrapper {
-    max-width: 720px;
+    max-width: 725px;
   }
 
   &__title {
