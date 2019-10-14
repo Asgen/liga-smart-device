@@ -55,3 +55,22 @@
     color: map-get($color, mid-gray);
   }
 }
+
+@media (max-width: map-get($breakPoint, tablet)) {
+  .advantages {
+
+    &__item {
+      width: 48%;
+      padding: 25px 25px 17px;
+      padding-right: 20px;
+    }
+
+    &__icon {
+      margin-bottom: 4px;
+    }
+
+    &__title {
+      margin-bottom: 8px;
+    }
+  }
+}

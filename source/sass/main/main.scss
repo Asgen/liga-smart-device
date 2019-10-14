@@ -21,3 +21,15 @@
   background-size: cover;
   background-position: center;
 }
+
+@media (max-width: map-get($breakPoint, tablet)) {
+  .main__hero {
+    padding-top: 188px;
+    padding-bottom: 163px;
+  }
+
+  .main__features {
+    padding: 53px 0;
+  }
+}
+

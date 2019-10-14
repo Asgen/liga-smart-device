@@ -61,7 +61,7 @@
     color: map-get($color, dark);
   }
 
-  &__scrollTextWrrapper {
+  &__scroll-text-wrapper {
     position: relative;
 
     height: 275px;
@@ -81,3 +81,42 @@
     transform: rotate(-90deg);
   }
 }
+
+@media (max-width: map-get($breakPoint, tablet)) {
+  .hero {
+    background-position: top;
+    background-position-y: -131px;
+    
+    &__wrapper {
+      max-width: 500px;
+      padding: 0 66px;
+    }
+
+    &__title {
+      margin-bottom: 28px;
+
+      @include main-title-tablet;
+    }
+
+    &__caption {
+      padding-left: 48px;
+      margin-bottom: 56px;
+      @include sub-title-tablet;
+    }
+
+    &__caption::before {
+      width: 33px;
+      left: 0;
+    }
+
+    &__button {
+      margin-left: 48px;
+      padding: 18px 31px 18px;
+    }
+
+    &__scroll-text-wrapper {
+      display: none;
+    }
+  }
+}
+
