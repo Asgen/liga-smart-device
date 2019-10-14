@@ -1,0 +1,21 @@
+.content-container {
+  position: relative;
+  width: 1173px;
+  margin: 0 auto;
+}
+
+.content-container--wide {
+  width: 1413px;
+}
+
+@media (max-width: map-get($breakPoint, tablet)) {
+  .content-container {
+    width: map-get($breakPoint, tablet);
+  }
+}
+
+@media (max-width: map-get($breakPoint, mobile)) {
+  .content-container {
+    width: map-get($breakPoint, mobile);
+  }
+}

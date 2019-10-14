@@ -1,0 +1,52 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  @include basic-text;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 33px 0;
+  line-height: 17px;
+}
+
+.header__logo-wrapper {
+  flex-grow: 1;
+}
+
+.header__link {
+  position: relative;
+
+  padding-left: 37px;
+  margin-right: 48px;
+  margin-left: 39px;
+
+  font-family: "PT Mono", "Arial", sans-serif;
+  color: map-get($color, white);
+}
+
+.header__link::before {
+  content: "";
+  width: 19px;
+  height: 17px;
+
+  position: absolute;
+  left: 0;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header__link--tel::before {
+  background-image: url("../img/phone.svg");
+}
+
+.header__link--mail::before {
+  background-image: url("../img/mail.svg");
+}

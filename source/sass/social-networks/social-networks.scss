@@ -1,0 +1,41 @@
+.socialNetworks {
+
+  padding-bottom: 9px;
+
+  &__list {
+    @include list-killer;
+
+    display: flex;
+  }
+
+  &__item {
+    width: 27px;
+    height: 27px;
+    margin-right: 15px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  &__item:hover {
+    opacity: 0.7;
+  }
+
+  &__item:first-child {
+    background-image: url("../img/fb.svg");
+  }
+
+  &__item:nth-child(2) {
+    background-image: url("../img/ok.svg");
+  }
+
+  &__item:last-child {
+    background-image: url("../img/vk.svg");
+  }
+
+  &__link {
+    font-size: 0;
+  }
+}

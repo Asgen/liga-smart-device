@@ -1,0 +1,23 @@
+.button {
+  padding: 14px 28px;
+  padding-bottom: 13px;
+
+  @include caption;
+  color: map-get($color, white);
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  outline: none;
+
+  border: 1px solid map-get($color, white);
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: map-get($color, light);
+}

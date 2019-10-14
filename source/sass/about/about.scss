@@ -1,0 +1,44 @@
+.about {
+  position: relative;
+  padding: 0 20px;
+  padding-left: 181px;
+  padding-top: 77px;
+
+  color: map-get($color, mid-gray);
+
+  &__image {
+    position: absolute;
+    left: -29px;
+    top: 82px;
+  }
+
+  &__title {
+    @include title;
+    @include margin-killer;
+    margin-bottom: 21px;
+  }
+
+  &__text {
+    @include margin-killer;
+    margin-bottom: 20px;
+
+    @include basic-text;
+    font-family: "PT Mono", "Arial", sans-serif;
+  }
+
+  &__text:last-of-type {
+    margin-bottom: 40px;
+  }
+
+  &__button {
+    padding-left: 50px;
+    padding-right: 50px;
+
+    color: map-get($color, light);
+    border-color: map-get($color, light);
+  }
+
+  &__button:hover {
+    color: map-get($color, white);
+  }
+}

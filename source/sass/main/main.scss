@@ -1,0 +1,23 @@
+.main__hero {
+  padding-top: 315px;
+}
+
+.main__features {
+  padding: 113px 0;
+
+  background-image: url("../img/bg-triangels.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.main__feedback {
+  padding: 92px 0;
+  padding-bottom: 112px;
+
+  background-color: map-get($color, light);
+  background-image: url("../img/bg-airplane.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
