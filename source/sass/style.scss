@@ -1,0 +1,53 @@
+@import "fonts.scss";
+@import "normalize.scss";
+@import "variables.scss";
+@import "header/header.scss";
+@import "footer/footer.scss";
+@import "button/button.scss";
+@import "content-container/content-container.scss";
+@import "social-networks/social-networks.scss";
+@import "hero/hero.scss";
+@import "main/main.scss";
+@import "advantages/advantages.scss";
+@import "about/about.scss";
+@import "services/services.scss";
+@import "feedback/feedback.scss";
+
+
+body {
+  /*background-color: map-get($color, dark);*/
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: map-get($color, light);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.hidden-on-mobile {
+  display: none;
+}
+
+@media (max-width: map-get($breakPoint, desktop)) {
+  .hidden-on-mobile {
+    display: inline;
+  }
+}

@@ -1,0 +1,123 @@
+$breakPoint: (
+  /*desktop: 1024px,*/
+  tablet: 1023px,
+  mobile: 767px
+);
+
+$color: (
+  white: #ffffff,
+  white-transparent: rgba(255, 255, 255, 0.1),
+  gray: #626962,
+  mid-gray: #666666,
+  light-gray: #ebebeb,
+  dark: #1b2d37,
+  light: #00b2ff
+);
+
+$font-size: (
+  general: 16px,
+  footer: 15px,
+  caption: 14px,
+  copyright: 13px,
+  main-title: 80px,
+  main-title-tablet: 60px,
+  main-title-mobile: 40px,
+  title: 36px,
+  title-tablet: 32px,
+  title-mobile: 28px,
+  sub-title: 22px,
+  featured-title: 24px,
+  service-caption: 20px
+);
+
+$line-height: (
+  general: 22px,
+  footer: 25px,
+  caption: 16px,
+  copyright: 24px,
+  main-title: 94px,
+  main-title-tablet: 70.3px,
+  main-title-mobile: 46.9px,
+  title: 51px,
+  title-tablet: 45px,
+  title-mobile: 39.4px,
+  sub-title: 35px,
+  featured-title: 34px,
+  service-caption: 30px
+);
+
+@mixin service-caption {
+  font-size: map-get($font-size, service-caption);
+  line-height: map-get($line-height, service-caption);
+  font-weight: normal;
+}
+
+@mixin basic-text {
+  font-size: map-get($font-size, general);
+  line-height: map-get($line-height, general);
+  font-weight: normal;
+}
+
+@mixin caption {
+  font-size: map-get($font-size, caption);
+  line-height: map-get($line-height, caption);
+  font-weight: normal;
+}
+
+@mixin service-caption {
+  font-size: map-get($font-size, service-caption);
+  line-height: map-get($line-height, service-caption);
+  font-weight: normal;
+}
+
+@mixin featured-title {
+  font-size: map-get($font-size, featured-title);
+  line-height: map-get($line-height, featured-title);
+  font-weight: normal;
+}
+
+@mixin title {
+  font-size: map-get($font-size, title);
+  line-height: map-get($line-height, title);
+  font-weight: normal;
+}
+
+@mixin main-title {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: map-get($font-size, main-title);
+  line-height: map-get($line-height, main-title);
+  font-weight: bold;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+@mixin copyright {
+  font-size: map-get($font-size, copyright);
+  line-height: map-get($line-height, copyright);
+  font-weight: normal;
+}
+
+@mixin sub-title {
+  font-size: map-get($font-size, sub-title);
+  line-height: map-get($line-height, sub-title);
+  font-weight: normal;
+}
+
+
+@mixin footer-text {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: map-get($font-size, footer);
+  line-height: map-get($line-height, footer);
+  font-weight: normal;
+}
+
+@mixin list-killer {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin margin-killer {
+  margin: 0;
+  padding: 0;
+}

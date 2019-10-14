@@ -1,0 +1,122 @@
+.feedback {
+  color: map-get($color, white);
+
+  &__wrapper {
+    width: 49%;
+    margin-left: auto;
+  }
+
+  &__title {
+    @include margin-killer;
+    margin-bottom: 10px;
+
+    @include title;
+  }
+
+  &__text {
+    @include margin-killer;
+    padding-left: 5px;
+
+    @include basic-text;
+    font-family: "PT Mono", "Arial", sans-serif;
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 52px;
+    padding-left: 5px;
+  }
+
+  &__input {
+    width: 47%;
+    margin-bottom: 40px;
+    padding: 14px 15px;
+    padding-bottom: 15px;
+
+    background-color: map-get($color, white-transparent);
+    box-sizing: border-box;
+    border: none;
+
+    font-family: "PT Mono", "Arial", sans-serif;
+  }
+
+  &__input:hover {
+    outline: map-get($color, light-gray) solid 1px;
+  }
+
+  &__input:focus {
+    outline: map-get($color, white) solid 1px;
+  }
+
+  &__input::placeholder {
+    color: map-get($color, white);
+  }
+
+  &__input--textarea {
+    width: 100%;
+    resize: none;
+
+    margin-bottom: 44px;
+  }
+
+  &__button {
+    width: 47%;
+    cursor: pointer;
+  }
+
+  &__button:hover {
+    background-color: map-get($color, white);
+    color: map-get($color, dark);
+  }
+
+  &__label {
+    position: relative;
+    width: 48%;
+    padding-left: 42px;
+
+    box-sizing: border-box;
+
+    font-family: "PT Mono", "Arial", sans-serif;
+
+    @include caption;
+    opacity: 0.8;
+
+    cursor: pointer;
+  }
+
+  &__span {
+    position: absolute;
+    top: 1px;
+    left: 9px;
+    height: 15px;
+    width: 15px;
+    border: 1px solid map-get($color, white);
+  }
+
+  &__label:hover input ~ &__span {
+    opacity: 0.7;
+  }
+
+  &__span::before {
+    content: "";
+    position: absolute;
+    display: none;
+
+    left: 5px;
+    top: 2px;
+
+    width: 4px;
+    height: 7px;
+    border: solid map-get($color, white);
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+  }
+
+  &__label input:checked ~ &__span::before {
+    display: block;
+  }
+}

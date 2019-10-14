@@ -1,0 +1,69 @@
+.services {
+  padding-top: 85px;
+  padding-bottom: 127px;
+
+  background-color: map-get($color, dark);
+  color: map-get($color, white);
+
+  &__image {
+    width: 100%;
+  }
+
+  &__title {
+    @include margin-killer;
+    @include title;
+
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    @include list-killer;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+  &__item {
+    position: relative;
+    width: 31.6%;
+    height: 620px;
+
+    box-sizing: border-box;
+  }
+
+  &__item:hover {
+    outline: map-get($color, light) solid 1px;
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 63px;
+
+    bottom: 0;
+    right: 0;
+
+    text-align: center;
+    vertical-align: middle;
+
+    background-color: map-get($color, light);
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__name {
+    position: absolute;
+    width: 45%;
+    top: 50px;
+    left: 46px;
+
+    @include margin-killer;
+    @include service-caption;
+    color: map-get($color, white);
+  }
+}

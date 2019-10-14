@@ -1,0 +1,57 @@
+.advantages {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include list-killer;
+  }
+
+  &__item {
+    width: 49%;
+
+    padding: 40px 45px;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+
+    background-color: map-get($color, white);
+    border: 1px solid map-get($color, light-gray);
+    border-left: 3px solid map-get($color, light);
+    box-sizing: border-box;
+  }
+
+  &__item:hover {
+    cursor: pointer;
+    background-color: map-get($color, light);
+  }
+
+  &__icon {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    @include margin-killer;
+    @include featured-title;
+
+    margin-bottom: 15px;
+    color: map-get($color, light);
+  }
+
+  &__item:hover &__title,
+  &__item:hover &__text {
+    color: map-get($color, white);
+  }
+
+  &__item:hover &__icon path {
+    fill: white;
+  }
+
+  &__text {
+    min-height: 103px;
+
+    @include margin-killer;
+    @include basic-text;
+    font-family: "PT Mono", "Arial", sans-serif;
+    color: map-get($color, mid-gray);
+  }
+}

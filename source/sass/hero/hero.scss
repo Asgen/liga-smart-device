@@ -1,0 +1,83 @@
+.hero {
+
+  color: map-get($color, white);
+
+  background-color: map-get($color, dark);
+  background-image: url("../../img/bg-hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__wrapper {
+    max-width: 720px;
+  }
+
+  &__title {
+    @include margin-killer;
+    @include main-title;
+    margin-left: -3px;
+    margin-bottom: 26px;
+  }
+
+  &__caption {
+    @include margin-killer;
+    position: relative;
+
+    padding-left: 94px;
+    margin-bottom: 44px;
+
+    font-family: "PT Mono", "Arial", sans-serif;
+
+    @include sub-title;
+  }
+
+  &__caption::before {
+    content: "";
+    position: absolute;
+    width: 66px;
+    height: 2px;
+
+    left: 0;
+    top: 17px;
+
+    background-color: map-get($color, white);
+  }
+
+  &__button {
+    margin-left: 94px;
+    padding: 16px 45px;
+    padding-bottom: 18px;
+
+    background-color: map-get($color, light);
+    border: none;
+
+    font-size: map-get($font-size, general);
+    line-height: 19px;
+    text-align: center;
+  }
+
+  &__button:hover {
+    background-color: map-get($color, white);
+    color: map-get($color, dark);
+  }
+
+  &__scrollTextWrrapper {
+    position: relative;
+
+    height: 275px;
+  }
+
+  &__scrollText {
+    position: absolute;
+    bottom: 72px;
+
+    @include margin-killer;
+    font-family: "PT Mono", "Arial", sans-serif;
+
+    @include caption;
+    opacity: 0.5;
+
+    transform-origin: top left;
+    transform: rotate(-90deg);
+  }
+}
