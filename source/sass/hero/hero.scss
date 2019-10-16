@@ -131,8 +131,9 @@
 
 @media (max-width: map-get($breakPoint, mobile)) {
   .hero {
-    background-size: contain;
     background-image: url("../img/devices-mobile.png"), url("../img/bg-hero-mobile.png");
+    background-size: contain, cover;
+    background-position-y: -40px;
 
     &__wrapper {
       padding: 0;

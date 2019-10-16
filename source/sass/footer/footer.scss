@@ -120,6 +120,10 @@
   width: 39%;
 }
 
+.footer__copyright-link {
+  color: map-get($color, dark);
+}
+
 @media (max-width: map-get($breakPoint, tablet)) {
   .footer {
     position: relative;
@@ -229,9 +233,27 @@
     }
 
     &__list--toggle {
-      display: none;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+
+    &__list--toggle-open {
+      display: block;
       padding-right: 20px;
       padding-bottom: 26px;
+
+      width: auto;
+      position: static;
+      height: auto;
+      margin: auto;
+      clip: unset;
+      overflow: visible;
     }
 
     &__expand-mark {
@@ -260,7 +282,12 @@
     }
 
     &__expand-mark::after {
+      width: 16px;
       transform: rotate(90deg);
+    }
+
+    &__expand-mark--opened::after {
+      width: 0;
     }
 
     &__line {
