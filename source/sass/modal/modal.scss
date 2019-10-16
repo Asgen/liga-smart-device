@@ -58,6 +58,7 @@
     box-sizing: border-box;
     border: none;
 
+    color: map-get($color, white);
     font-family: "PT Mono", "Arial", sans-serif;
     outline-offset: 5px;
   }

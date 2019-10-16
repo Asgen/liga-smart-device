@@ -71,8 +71,5 @@ closeModalButton.addEventListener(`click`, (evt) => {
 
 submitButton.addEventListener(`click`, (evt) => {
   evt.preventDefault();
-
-  modal.style.display = `none`;
-  body.style.overflow = `auto`;
-
+  closeModal();
 });
