@@ -14,8 +14,11 @@
 @import "feedback/feedback.scss";
 @import "modal/modal.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  /*background-color: map-get($color, dark);*/
   font-family: "Roboto Condensed", "Arial", sans-serif;
 }
 
