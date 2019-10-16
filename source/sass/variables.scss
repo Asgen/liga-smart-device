@@ -1,5 +1,4 @@
 $breakPoint: (
-  /*desktop: 1024px,*/
   tablet: 1023px,
   mobile: 767px
 );
@@ -8,10 +7,12 @@ $color: (
   white: #ffffff,
   white-transparent: rgba(255, 255, 255, 0.1),
   gray: #626962,
+  gray-c4: #c4c4c4,
   mid-gray: #666666,
   light-gray: #ebebeb,
   dark: #1b2d37,
-  light: #00b2ff
+  light: #00b2ff,
+  black-transparent: rgba(0%, 0%, 0%, 0.5)
 );
 
 $font-size: (
@@ -26,6 +27,7 @@ $font-size: (
   title-tablet: 32px,
   title-mobile: 28px,
   sub-title: 22px,
+  sub-title-tablet: 18px,
   featured-title: 24px,
   service-caption: 20px
 );
@@ -37,11 +39,12 @@ $line-height: (
   copyright: 24px,
   main-title: 94px,
   main-title-tablet: 70.3px,
-  main-title-mobile: 46.9px,
+  main-title-mobile: 47px,
   title: 51px,
   title-tablet: 45px,
   title-mobile: 39.4px,
   sub-title: 35px,
+  sub-title-tablet: 28px,
   featured-title: 34px,
   service-caption: 30px
 );
@@ -82,10 +85,40 @@ $line-height: (
   font-weight: normal;
 }
 
+@mixin title-tablet {
+  font-size: map-get($font-size, title-tablet);
+  line-height: map-get($line-height, title-tablet);
+  font-weight: normal;
+}
+
+@mixin title-mobile {
+  font-size: map-get($font-size, title-mobile);
+  line-height: map-get($line-height, title-mobile);
+  font-weight: normal;
+}
+
 @mixin main-title {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: map-get($font-size, main-title);
   line-height: map-get($line-height, main-title);
+  font-weight: bold;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+@mixin main-title-tablet {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: map-get($font-size, main-title-tablet);
+  line-height: map-get($line-height, main-title-tablet);
+  font-weight: bold;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+@mixin main-title-mobile {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: map-get($font-size, main-title-mobile);
+  line-height: map-get($line-height, main-title-mobile);
   font-weight: bold;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -100,6 +133,12 @@ $line-height: (
 @mixin sub-title {
   font-size: map-get($font-size, sub-title);
   line-height: map-get($line-height, sub-title);
+  font-weight: normal;
+}
+
+@mixin sub-title-tablet {
+  font-size: map-get($font-size, sub-title-tablet);
+  line-height: map-get($line-height, sub-title-tablet);
   font-weight: normal;
 }
 

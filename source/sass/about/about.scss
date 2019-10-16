@@ -41,4 +41,66 @@
   &__button:hover {
     color: map-get($color, white);
   }
+
+  &__dots {
+    display: none;
+  }
+}
+
+@media (max-width: map-get($breakPoint, tablet)) {
+  .about {
+    padding-top: 26px;
+    padding-left: 187px;
+    padding-right: 0;
+
+    &__title {
+      @include title-tablet;
+
+      margin-bottom: 25px;
+    }
+
+    &__text:last-of-type {
+      margin-bottom: 41px;
+    }
+
+    &__extra-text {
+      display: none;
+    }
+
+    &__dots {
+      display: inline;
+    }
+
+    &__image {
+      left: -25px;
+      top: 26px;
+    }
+  }
+}
+
+@media (max-width: map-get($breakPoint, mobile)) {
+  .about {
+    padding: 0;
+
+    &__title {
+      @include title-mobile;
+
+      margin-bottom: 21px;
+    }
+
+    &__text {
+      padding-left: 1px;
+      padding-right: 0;
+
+      margin-bottom: 40px;
+    }
+
+    &__text:last-of-type {
+      margin-bottom: 28px;
+    }
+
+    &__image {
+      display: none;
+    }
+  }
 }

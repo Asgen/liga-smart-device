@@ -1,21 +1,43 @@
 .content-container {
   position: relative;
-  width: 1173px;
+  max-width: 1253px;
   margin: 0 auto;
+  padding: 0 40px;
+
+  box-sizing: border-box;
 }
 
 .content-container--wide {
-  width: 1413px;
+  max-width: 1453px;
+  padding: 0 20px;
 }
 
 @media (max-width: map-get($breakPoint, tablet)) {
   .content-container {
-    width: map-get($breakPoint, tablet);
+    padding: 0 25px;
+    /* max-width: 771px; */
+    width: 100%;
+  }
+
+  .content-container--footer {
+    padding: 0;
+  }
+
+  .content-container--static {
+    position: static;
   }
 }
 
 @media (max-width: map-get($breakPoint, mobile)) {
   .content-container {
-    width: map-get($breakPoint, mobile);
+    padding: 0 15px;
+  }
+
+  .content-container--wide {
+    padding: 0 17px;
+  }
+
+  .content-container--footer {
+    padding: 0;
   }
 }

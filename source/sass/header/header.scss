@@ -20,6 +20,10 @@
   flex-grow: 1;
 }
 
+.header__logo {
+  display: block;
+}
+
 .header__link {
   position: relative;
 
@@ -41,6 +45,7 @@
 
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
 }
 
 .header__link--tel::before {
@@ -49,4 +54,45 @@
 
 .header__link--mail::before {
   background-image: url("../img/mail.svg");
+}
+
+@media (max-width: map-get($breakPoint, tablet)) {
+  .header {
+    &__wrapper {
+      padding: 20px 0;
+    }
+
+    &__button {
+      display: none;
+    }
+
+    &__link {
+      height: 31px;
+      padding: 0;
+      margin-right: 24px;
+      margin-left: 34px;
+
+      font-size: 0;
+    }
+
+    &__link::before {
+      width: 24px;
+      height: 23px;
+    }
+  }
+}
+
+
+@media (max-width: map-get($breakPoint, mobile)) {
+  .header {
+    &__wrapper {
+      padding: 17px 0;
+    }
+
+    &__link {
+      width: 23px;
+      margin: 0;
+      margin-left: 24px;
+    }
+  }
 }
