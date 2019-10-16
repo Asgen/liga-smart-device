@@ -1,21 +1,36 @@
 "use strict";
 
+const KeyCode = {
+  ESC: 27,
+};
+
 const modal = document.querySelector(`.modal`);
 const modalForm = modal.querySelector(`.modal__wrapper`);
 const openModalButton = document.querySelector(`#open-modal`);
-const closeModal = document.querySelector(`.modal__close`);
+const closeModalButton = document.querySelector(`.modal__close`);
 const body = document.querySelector(`body`);
 const firstInput = document.querySelector(`.modal__input`);
 const submitButton = document.querySelector(`.modal__submit`);
 
 const textToggles = document.querySelectorAll(`.footer__expand-mark`);
 
+const closeModal = () => {
+  modal.style.display = `none`;
+  body.style.overflow = `auto`;
+  modal.removeEventListener(`click`, onModalOverlayClick);
+};
+
 const onModalOverlayClick = (evt) => {
   const isClickInside = modalForm.contains(evt.target);
   if (!isClickInside) {
-    modal.style.display = `none`;
-    body.style.overflow = `auto`;
-    modal.removeEventListener(`click`, onModalOverlayClick);
+    closeModal();
+  }
+};
+
+const onEscKeyDown = (evt) => {
+  if (evt.keyCode === KeyCode.ESC) {
+    closeModal();
+    modal.removeEventListener(`click`, onEscKeyDown);
   }
 };
 
@@ -45,22 +60,16 @@ openModalButton.addEventListener(`click`, (evt) => {
   body.style.overflow = `hidden`;
 
   modal.addEventListener(`click`, onModalOverlayClick);
+  modal.addEventListener(`keydown`, onEscKeyDown);
 
 });
 
-closeModal.addEventListener(`click`, (evt) => {
+closeModalButton.addEventListener(`click`, (evt) => {
   evt.preventDefault();
-
-  modal.style.display = `none`;
-  body.style.overflow = `auto`;
-  modal.removeEventListener(`click`, onModalOverlayClick);
-
+  closeModal();
 });
 
 submitButton.addEventListener(`click`, (evt) => {
   evt.preventDefault();
-
-  modal.style.display = `none`;
-  body.style.overflow = `auto`;
-
+  closeModal();
 });
