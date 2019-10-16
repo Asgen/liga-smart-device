@@ -15,19 +15,29 @@
 @media (max-width: map-get($breakPoint, tablet)) {
   .content-container {
     padding: 0 25px;
-    max-width: 771px;
+    /* max-width: 771px; */
+    width: 100%;
+  }
+
+  .content-container--footer {
+    padding: 0;
+  }
+
+  .content-container--static {
+    position: static;
   }
 }
 
 @media (max-width: map-get($breakPoint, mobile)) {
-
   .content-container {
-    padding: 0 20px;
-    max-width: 360px;
+    padding: 0 15px;
   }
 
- /*  .content-container--wide {
-   max-width: 787px;
-   padding: 0 10px;
- } */
+  .content-container--wide {
+    padding: 0 17px;
+  }
+
+  .content-container--footer {
+    padding: 0;
+  }
 }

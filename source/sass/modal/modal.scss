@@ -1,16 +1,32 @@
-.feedback {
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+
+  background-color: map-get($color, black-transparent);
+
   color: map-get($color, white);
 
   &__wrapper {
-    width: 49%;
-    margin-left: auto;
+    position: relative;
+
+    max-width: 490px;
+    margin: 0 auto;
+    margin-top: 136px;
+    padding: 39px 33px;
+    padding-right: 40px;
+
+    background-color: map-get($color, light);
+    box-sizing: border-box;
   }
 
   &__title {
-    @include margin-killer;
-    margin-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 13px;
 
-    @include title;
+    @include title-mobile;
   }
 
   &__text {
@@ -27,15 +43,15 @@
     justify-content: space-between;
     align-items: center;
 
-    padding-top: 52px;
-    padding-left: 5px;
+    padding-left: 0;
+    padding-top: 25px;
   }
 
   &__input {
-    width: 47%;
-    margin-bottom: 40px;
-    padding: 14px 15px;
+    width: 100%;
+    padding: 14px 17px;
     padding-bottom: 15px;
+    margin-bottom: 29px;
 
     background-color: map-get($color, white-transparent);
     box-sizing: border-box;
@@ -58,6 +74,7 @@
   }
 
   &__input--textarea {
+    max-height: 104px;
     width: 100%;
     resize: none;
 
@@ -65,7 +82,8 @@
   }
 
   &__button {
-    width: 47%;
+    width: 100%;
+    margin-bottom: 32px;
     cursor: pointer;
   }
 
@@ -76,8 +94,8 @@
 
   &__label {
     position: relative;
-    width: 48%;
-    padding-left: 42px;
+    width: 90%;
+    padding-left: 50px;
 
     box-sizing: border-box;
 
@@ -92,7 +110,7 @@
   &__span {
     position: absolute;
     top: 1px;
-    left: 9px;
+    left: 0;
     height: 15px;
     width: 15px;
     border: 1px solid map-get($color, white);
@@ -120,87 +138,50 @@
   &__label input:checked ~ &__span::before {
     display: block;
   }
-}
 
+  &__close {
+    width: 16px;
+    height: 16px;
 
-@media (max-width: map-get($breakPoint, tablet)) {
-  .feedback {
-    &__wrapper {
-      width: 100%;
-      padding: 0 63px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 
-      box-sizing: border-box;
-    }
+    cursor: pointer;
+  }
 
-    &__title {
-      margin-bottom: 16px;
+  &__close::before,
+  &__close::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 1px;
 
-      @include title-tablet;
-    }
+    background-color: map-get($color, white);
+  }
 
-    &__label {
-      width: 48%;
-      padding-left: 45px;
-    }
+  &__close::before {
+    transform: rotate(45deg);
+  }
 
-    &__input {
-      padding-bottom: 22px;
-    }
+  &__close::after {
+    transform: rotate(-45deg);
+  }
 
-    &__input--textarea {
-      margin-bottom: 43px;
-    }
-
-    &__span {
-      left: 13px;
-    }
+  &__close:hover {
+    opacity: 0.5;
   }
 }
 
-@media (max-width: map-get($breakPoint, mobile)) {
-  .feedback {
+@media (max-width: map-get($breakPoint, tablet)) {
+  .modal {
     &__wrapper {
-      padding: 0;
-    }
-
-    &__title {
-      margin-bottom: 13px;
-
-      @include title-mobile;
-    }
-
-    &__text {
-      margin: 0 -5px;
-    }
-
-    &__form {
-      padding-left: 0;
-      padding-top: 25px;
+      margin-top: 0;
     }
 
     &__label {
       width: 100%;
-      padding-left: 34px;
-    }
-
-    &__span {
-      left: 0;
-    }
-
-    &__input {
-      width: 100%;
-      padding-left: 17px;
-      padding-right: 17px;
-      margin-bottom: 29px;
-    }
-
-    &__input--textarea {
-      max-height: 104px;
-    }
-
-    &__button {
-      width: 100%;
-      margin-bottom: 32px;
+      padding-left: 35px;
     }
   }
 }

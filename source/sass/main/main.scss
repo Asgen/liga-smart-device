@@ -30,6 +30,28 @@
 
   .main__features {
     padding: 53px 0;
+    padding-bottom: 83px;
+  }
+
+  .main__feedback {
+    padding-top: 80px;
+    padding-bottom: 103px;
+    background-image: none;
   }
 }
 
+@media (max-width: map-get($breakPoint, mobile)) {
+  .main__hero {
+    padding-bottom: 69px;
+  }
+
+  .main__features {
+    padding-top: 38px;
+    padding-bottom: 65px;
+  }
+
+  .main__feedback {
+    padding-top: 30px;
+    padding-bottom: 42px;
+  }
+}

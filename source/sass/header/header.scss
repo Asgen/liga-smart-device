@@ -81,3 +81,18 @@
     }
   }
 }
+
+
+@media (max-width: map-get($breakPoint, mobile)) {
+  .header {
+    &__wrapper {
+      padding: 17px 0;
+    }
+
+    &__link {
+      width: 23px;
+      margin: 0;
+      margin-left: 24px;
+    }
+  }
+}

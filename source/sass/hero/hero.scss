@@ -3,7 +3,7 @@
   color: map-get($color, white);
 
   background-color: map-get($color, dark);
-  background-image: url("../img/bg-hero.png");
+  background-image: url("../img/devices.png"), url("../img/bg-hero.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -45,15 +45,21 @@
 
   &__button {
     margin-left: 94px;
-    padding: 16px 45px;
+    padding: 16px 47px;
     padding-bottom: 18px;
 
     background-color: map-get($color, light);
     border: none;
+  }
 
+  &__span {
     font-size: map-get($font-size, general);
     line-height: 19px;
     text-align: center;
+  }
+
+  &__span--mobile {
+    display: none;
   }
 
   &__button:hover {
@@ -67,7 +73,7 @@
     height: 275px;
   }
 
-  &__scrollText {
+  &__scroll-text {
     position: absolute;
     bottom: 72px;
 
@@ -84,9 +90,9 @@
 
 @media (max-width: map-get($breakPoint, tablet)) {
   .hero {
+    background-image: url("../img/devices-tablet.png"), url("../img/bg-hero-tablet.png");
     background-position: top;
-    background-position-y: -131px;
-    
+
     &__wrapper {
       max-width: 500px;
       padding: 0 66px;
@@ -101,6 +107,7 @@
     &__caption {
       padding-left: 48px;
       margin-bottom: 56px;
+
       @include sub-title-tablet;
     }
 
@@ -111,7 +118,7 @@
 
     &__button {
       margin-left: 48px;
-      padding: 18px 31px 18px;
+      padding: 18px 33px 18px;
     }
 
     &__scroll-text-wrapper {
@@ -120,3 +127,42 @@
   }
 }
 
+
+@media (max-width: map-get($breakPoint, mobile)) {
+  .hero {
+    background-size: contain;
+    background-image: url("../img/devices-mobile.png"), url("../img/bg-hero-mobile.png");
+
+    &__wrapper {
+      padding: 0;
+      padding-top: 98px;
+    }
+
+    &__title {
+      margin-bottom: 25px;
+
+      @include main-title-mobile;
+    }
+
+    &__caption {
+      margin-bottom: 39px;
+
+      font-size: map-get($font-size, general);
+      line-height: 26px;
+    }
+
+    &__span {
+      display: none;
+    }
+
+    &__span--mobile {
+      display: inline;
+    }
+
+    &__button {
+      width: 100%;
+      padding: 18px 31px;
+      margin-left: 1px;
+    }
+  }
+}
