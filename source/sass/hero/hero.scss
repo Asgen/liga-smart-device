@@ -79,6 +79,7 @@
 
     @include margin-killer;
     font-family: "PT Mono", "Arial", sans-serif;
+    color: map-get($color, white);
 
     @include caption;
     opacity: 0.5;

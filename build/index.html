@@ -21,7 +21,7 @@
           </div>
           <a class="header__link header__link--mail" href="mailto:info@sd.ru">info@sd.ru</a>
           <a class="header__link header__link--tel" href="tel:+74950005252">+7 (495) 000 52 52</a>
-          <button class="button header__button">Заказать звонок</button>
+          <button id="open-modal" class="button header__button">Заказать звонок</button>
         </div>
       </div>
     </header>
@@ -35,7 +35,7 @@
               <p class="hero__caption">производство и монтаж, поставка комплектующих, блоков и модулей</p>
               <button class="button hero__button"><span class="hero__span">Получить бесплатную консультацию</span><span class="hero__span hero__span--mobile">Бесплатная консультация</span></button>
               <div class="hero__scroll-text-wrapper">
-                <p class="hero__scroll-text">Скролл вниз</p>
+                <a href="#advantages" class="hero__scroll-text">Скролл вниз</a>
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@
 
       <div class="main__features">
         <div class="content-container">
-          <section class="advantages">
+          <section id="advantages" class="advantages">
             <h2 class="visually-hidden">Приемущества</h2>
             <div class="advantages__wrapper">
               <ul class="advantages__list">
@@ -154,12 +154,12 @@
             <h3 class="feedback__title">Остались вопросы? Задайте их нам!</h3>
             <p class="feedback__text">Мы проконсультируем Вас бесплатно!</p>
             <form action="#" class="feedback__form">
-              <input type="text" class="feedback__input" placeholder="Имя">
-              <input type="tel" class="feedback__input" placeholder="Телефон">
-              <textarea class="feedback__input feedback__input--textarea" cols="30" rows="7" placeholder="Ваш вопрос"></textarea>
+              <input name="name" type="text" class="feedback__input" placeholder="Имя">
+              <input name="name" type="tel" class="feedback__input" placeholder="Телефон">
+              <textarea name="question" class="feedback__input feedback__input--textarea" cols="30" rows="7" placeholder="Ваш вопрос"></textarea>
               <button class="button feedback__button" type="submit">Задать вопрос</button>
               <label for="feedback__checkbox" class="feedback__label">Я согласен на обработку персональных данных
-                <input id="feedback__checkbox" type="checkbox" class="visually-hidden">
+                <input name="policy" id="feedback__checkbox" type="checkbox" class="visually-hidden">
                 <span class="feedback__span"></span>
               </label>
             </form>
@@ -240,13 +240,13 @@
                   <a href="#" class="footer__link">г. Мытищи, Олимпийский проспект, д.10</a>
                 </li>
                 <li class="footer__item">
-                  <a href="#" class="footer__link">+7 (495) 589-40-50</a>
+                  <a href="tel:+74955894050" class="footer__link">+7 (495) 589-40-50</a>
                 </li>
                 <li class="footer__item">
-                  <a href="#" class="footer__link">+7 (925) 003-87-67</a>
+                  <a href="tel:+79250038767" class="footer__link">+7 (925) 003-87-67</a>
                 </li>
                 <li class="footer__item">
-                  <a href="#" class="footer__link">+7 (926) 926-080-79</a>
+                  <a href="tel:+792608079" class="footer__link">+7 (926) 926-080-79</a>
                 </li>
               </ul>
             </div>
@@ -274,10 +274,10 @@
         <h3 class="modal__title">Закажите звонок</h3>
         <p class="modal__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <form action="#" class="modal__form">
-          <input type="text" class="modal__input" placeholder="Имя">
-          <input type="tel" class="modal__input" placeholder="Телефон">
-          <textarea class="modal__input modal__input--textarea" cols="30" rows="7" placeholder="Ваш вопрос"></textarea>
-          <button class="button modal__button" type="submit">Отправить</button>
+          <input name="name" id="modal-name" type="text" class="modal__input" placeholder="Имя">
+          <input name="phone" id="modal-tel" type="tel" class="modal__input" placeholder="Телефон">
+          <textarea name="message" id="modal-message" class="modal__input modal__input--textarea" cols="30" rows="7" placeholder="Ваш вопрос"></textarea>
+          <button class="button modal__button modal__submit" type="submit">Отправить</button>
           <label for="modal__checkbox" class="modal__label">Я согласен на обработку персональных данных
             <input id="modal__checkbox" type="checkbox" class="visually-hidden">
             <span class="modal__span"></span>
@@ -285,5 +285,7 @@
         </form>
       </div>
     </div>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
