@@ -17,6 +17,11 @@
   &__item:hover {
     opacity: 0.7;
   }
+
+  &__link {
+    height: 100%;
+    display: block;
+  }
 }
 
 @media (max-width: map-get($breakPoint, mobile)) {
