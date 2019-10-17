@@ -203,7 +203,7 @@
     & &__column {
       width: 100%;
       padding: 0;
-      padding-left: 13px;
+      padding-left: 15px;
     }
 
     &__column:first-child {
@@ -224,13 +224,16 @@
     }
 
     &__column-wrapper {
-      padding-top: 29px;
+      padding-top: 0;
     }
 
     &__title--relative {
       position: relative;
-      margin-bottom: 20px;
+      padding-top: 25px;
+      padding-bottom: 22px;
+      margin: 0;
       left: 0;
+      top: 0;
 
       cursor: pointer;
     }
@@ -248,6 +251,7 @@
 
     &__list--toggle-open {
       display: block;
+      padding-top: 5px;
       padding-right: 20px;
       padding-bottom: 26px;
 
@@ -313,7 +317,7 @@
     }
 
     & &__copyright-item:last-child {
-      padding-left: 12px;
+      padding-left: 2px;
       margin-bottom: 26px;
     }
 
