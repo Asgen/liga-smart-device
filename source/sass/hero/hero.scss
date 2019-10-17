@@ -133,6 +133,7 @@
   .hero {
     background-image: url("../img/devices-mobile.png"), url("../img/bg-hero-mobile.png");
     background-size: contain, cover;
+    background-position: right;
     background-position-y: -40px;
 
     &__wrapper {

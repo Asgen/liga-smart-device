@@ -12,7 +12,7 @@ const body = document.querySelector(`body`);
 const firstInput = document.querySelector(`.modal__input`);
 const submitButton = document.querySelector(`.modal__submit`);
 
-const textToggles = document.querySelectorAll(`.footer__expand-mark`);
+const textToggles = document.querySelectorAll(`.footer__title--relative`);
 
 const closeModal = () => {
   modal.style.display = `none`;
