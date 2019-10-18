@@ -240,6 +240,10 @@
       cursor: pointer;
     }
 
+    &__title--relative:focus {
+      tap-highlight-color: transparent;
+    }
+
     &__list--toggle {
       position: absolute;
       width: 1px;

@@ -24,7 +24,7 @@
     position: relative;
 
     padding-left: 94px;
-    margin-bottom: 44px;
+    margin-bottom: 60px;
 
     font-family: "PT Mono", "Arial", sans-serif;
 
@@ -46,7 +46,7 @@
   &__button {
     max-width: 408px;
     margin-left: 94px;
-    padding: 16px 47px;
+    padding: 20px 47px;
     padding-bottom: 18px;
 
     background-color: map-get($color, light);
@@ -71,7 +71,7 @@
   &__scroll-text-wrapper {
     position: relative;
 
-    height: 275px;
+    height: 293px;
   }
 
   &__scroll-text {
