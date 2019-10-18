@@ -10,7 +10,6 @@ const openModalButton = document.querySelector(`#open-modal`);
 const closeModalButton = document.querySelector(`.modal__close`);
 const body = document.querySelector(`body`);
 const firstInput = document.querySelector(`.modal__input`);
-const submitButton = document.querySelector(`.modal__submit`);
 
 const textToggles = document.querySelectorAll(`.footer__title--relative`);
 
@@ -65,11 +64,6 @@ openModalButton.addEventListener(`click`, (evt) => {
 });
 
 closeModalButton.addEventListener(`click`, (evt) => {
-  evt.preventDefault();
-  closeModal();
-});
-
-submitButton.addEventListener(`click`, (evt) => {
   evt.preventDefault();
   closeModal();
 });

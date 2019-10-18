@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="Description" content="производство и монтаж печатных плат, поставка комплектующих, блоков и модулей.">
     <title>Smart Device</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -33,7 +34,7 @@
             <div class="hero__wrapper">
               <h2 class="hero__title">Печатные платы</h2>
               <p class="hero__caption">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-              <button class="button hero__button"><span class="hero__span">Получить бесплатную консультацию</span><span class="hero__span hero__span--mobile">Бесплатная консультация</span></button>
+              <a href="#contact-form" class="button hero__button"><span class="hero__span">Получить бесплатную консультацию</span><span class="hero__span hero__span--mobile">Бесплатная консультация</span></a>
               <div class="hero__scroll-text-wrapper">
                 <a href="#advantages" class="hero__scroll-text">Скролл вниз</a>
               </div>
@@ -41,9 +42,9 @@
           </div>
       </section>
 
-      <div class="main__features">
+      <div class="main__features" id="advantages">
         <div class="content-container">
-          <section id="advantages" class="advantages">
+          <section class="advantages">
             <h2 class="visually-hidden">Приемущества</h2>
             <div class="advantages__wrapper">
               <ul class="advantages__list">
@@ -116,7 +117,7 @@
                 <picture>
                   <source media="(max-width: 767px)" srcset="img/service-production-mobile.jpg">
                   <source media="(max-width: 1023px)" srcset="img/service-production-tablet.jpg">
-                  <img class="services__image" src="img/service-production.jpg" alt="Smart Devices services">
+                  <img class="services__image" src="img/service-production.jpg" alt="Smart Devices Производство печатных плат">
                 </picture>
                 <h3 class="services__name">Производство печатных плат</h3>
                 <div class="services__square"></div>
@@ -127,7 +128,7 @@
                 <picture>
                   <source media="(max-width: 767px)" srcset="img/service-assembling-mobile.jpg">
                   <source media="(max-width: 1023px)" srcset="img/service-assembling-tablet.jpg">
-                  <img class="services__image" src="img/service-assembling.jpg" alt="Smart Devices services">
+                  <img class="services__image" src="img/service-assembling.jpg" alt="Smart Devices Монтаж печатных плат">
                 </picture>
                 <h3 class="services__name">Монтаж печатных плат</h3>
                 <div class="services__square"></div>
@@ -138,7 +139,7 @@
                 <picture>
                   <source media="(max-width: 767px)" srcset="img/service-lights-mobile.jpg">
                   <source media="(max-width: 1023px)" srcset="img/service-lights-tablet.jpg">
-                  <img class="services__image" src="img/service-lights.jpg" alt="Smart Devices services">
+                  <img class="services__image" src="img/service-lights.jpg" alt="Smart Devices Комплектующие для светотехники">
                 </picture>
                 <h3 class="services__name">Комплектующие для светотехники</h3>
                 <div class="services__square"></div>
@@ -148,15 +149,15 @@
         </div>
       </section>
 
-      <section class="main__feedback feedback">
+      <section class="main__feedback feedback" id="contact-form">
         <div class="content-container">
           <div class="feedback__wrapper">
             <h3 class="feedback__title">Остались вопросы? Задайте их нам!</h3>
             <p class="feedback__text">Мы проконсультируем Вас бесплатно!</p>
             <form action="#" class="feedback__form">
-              <input name="name" type="text" class="feedback__input" placeholder="Имя">
-              <input name="name" type="tel" class="feedback__input" placeholder="Телефон">
-              <textarea name="question" class="feedback__input feedback__input--textarea" cols="30" rows="7" placeholder="Ваш вопрос"></textarea>
+              <input name="name" type="text" class="feedback__input" placeholder="Имя" aria-label="name" required>
+              <input title="Только цифры" name="name" type="tel" class="feedback__input" placeholder="Телефон" aria-label="phone" pattern="^[ 0-9]+$" required>
+              <textarea name="question" class="feedback__input feedback__input--textarea" cols="30" rows="7" placeholder="Ваш вопрос" aria-label="message" required></textarea>
               <button class="button feedback__button" type="submit">Задать вопрос</button>
               <label for="feedback__checkbox" class="feedback__label">Я согласен на обработку персональных данных
                 <input name="policy" id="feedback__checkbox" type="checkbox" class="visually-hidden">
@@ -274,9 +275,9 @@
         <h3 class="modal__title">Закажите звонок</h3>
         <p class="modal__text">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <form action="#" class="modal__form">
-          <input name="name" id="modal-name" type="text" class="modal__input" placeholder="Имя">
-          <input name="phone" id="modal-tel" type="tel" class="modal__input" placeholder="Телефон">
-          <textarea name="message" id="modal-message" class="modal__input modal__input--textarea" cols="30" rows="7" placeholder="Ваш вопрос"></textarea>
+          <input name="name" id="modal-name" type="text" class="modal__input" placeholder="Имя" required>
+          <input title="Только цифры" name="phone" id="modal-tel" type="tel" class="modal__input" placeholder="Телефон" pattern="^[ 0-9]+$" required>
+          <textarea name="message" id="modal-message" class="modal__input modal__input--textarea" cols="30" rows="7" placeholder="Ваш вопрос" required></textarea>
           <button class="button modal__button modal__submit" type="submit">Отправить</button>
           <label for="modal__checkbox" class="modal__label">Я согласен на обработку персональных данных
             <input id="modal__checkbox" type="checkbox" class="visually-hidden">

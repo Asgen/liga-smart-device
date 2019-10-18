@@ -44,6 +44,8 @@
 
 .footer__column:nth-child(2) .footer__item {
   width: 47%;
+  padding-right: 15px;
+  box-sizing: border-box;
 }
 
 .footer__list--flex .footer__item:nth-child(2) {
@@ -112,12 +114,12 @@
 }
 
 .footer__copyright-item:nth-child(2) {
-  width: 22%;
+  width: 25%;
   padding-left: 3px;
 }
 
 .footer__copyright-item:nth-child(3) {
-  width: 39%;
+  width: 36%;
 }
 
 .footer__copyright-link {
