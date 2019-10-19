@@ -1,5 +1,3 @@
-//import IMask from 'imask';
-
 const KeyCode = {
   ESC: 27,
 };
@@ -73,4 +71,4 @@ const element = document.querySelector(`#question-phone`);
 const maskOptions = {
   mask: `+{7}(000)000-00-00`
 };
-const mask = IMask(element, maskOptions);
+IMask(element, maskOptions);

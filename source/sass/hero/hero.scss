@@ -24,7 +24,7 @@
     position: relative;
 
     padding-left: 94px;
-    margin-bottom: 60px;
+    margin-bottom: 42px;
 
     font-family: "PT Mono", "Arial", sans-serif;
 
@@ -44,6 +44,7 @@
   }
 
   &__button {
+    display: block;
     max-width: 408px;
     margin-left: 94px;
     padding: 20px 47px;
@@ -71,7 +72,7 @@
   &__scroll-text-wrapper {
     position: relative;
 
-    height: 293px;
+    height: 273px;
   }
 
   &__scroll-text {
@@ -119,8 +120,9 @@
     }
 
     &__button {
+      max-width: 379px;
       margin-left: 48px;
-      padding: 18px 33px 18px;
+      padding: 18px 32px 18px;
     }
 
     &__scroll-text-wrapper {
