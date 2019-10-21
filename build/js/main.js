@@ -67,8 +67,10 @@ closeModalButton.addEventListener(`click`, (evt) => {
 });
 
 // Маска для ввода номера тел
-const element = document.querySelector(`#question-phone`);
+const modalPhoneInput = document.querySelector(`#modal-tel`);
+const phoneInput = document.querySelector(`#question-phone`);
 const maskOptions = {
   mask: `+{7}(000)000-00-00`
 };
-IMask(element, maskOptions);
+IMask(modalPhoneInput, maskOptions);
+IMask(phoneInput, maskOptions);

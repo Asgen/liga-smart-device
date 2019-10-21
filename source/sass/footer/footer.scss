@@ -238,10 +238,7 @@
       top: 0;
 
       cursor: pointer;
-    }
-
-    &__title--relative:focus {
-      tap-highlight-color: transparent;
+      -webkit-tap-highlight-color: transparent;
     }
 
     &__list--toggle {
